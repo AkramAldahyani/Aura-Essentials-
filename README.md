@@ -1,13 +1,12 @@
 # Aura-Essentials-
 Web Fundamentals Group Project 
 
-
-# First Pick a title for the project:
+# Project Title: Aura Essentials
 
 # Second, environment preparation:
-	1- git repo
+	1- git repo (done)
 	2- design the pages
-	3- split the tasks
+	3- split the tasks(done)
 # Third, start implementation. (each member will be assigned to a task).
 # Last review the work.
 
@@ -25,23 +24,23 @@ project structure:
 	2- what exactly should we include in the making-of page.(the story of how did we design it.)
 --------------------------------------------------------------------------------
 More details about the pages:
-1- Home page:
+1- Home page: (Bayan)
 	a. small statement about the shop.
 	b. picture
 	c. logo
 	d. title
 	e. form 
-2- Item page:
+2- Item page: (Amnah)
 	a. navigation bar
 	b. list of items
 	c. footer
 	d. link the items to the companies
-3- shopping cart:
+3- shopping cart: (Akram)
 	a. navigation bar.
 	b. list of chosen items.
 	c. checkout button.
 	d. continue shopping button
 	e. remove item button.
 4- testimonials. TBA
-4- making of page: TBA
-5- our story: TBA.
+4- making of page: TBA (Hussain)
+5- our story: TBA (Hussain)
