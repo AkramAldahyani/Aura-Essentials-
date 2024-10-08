@@ -1,7 +1,7 @@
 # Aura-Essentials-
 Web Fundamentals Group Project 
 
-# Project Title: Aura Essentials
+# Project Title: Aura Essentials 
 
 # Second, environment preparation:
 	1- git repo (done)
@@ -41,6 +41,6 @@ More details about the pages:
 	c. checkout button.
 	d. continue shopping button
 	e. remove item button.
-4- testimonials. TBA
+4- testimonials. TBA (Farah)
 4- making of page: TBA (Hussain)
 5- our story: TBA (Hussain)
