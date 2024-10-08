@@ -30,6 +30,7 @@ More details about the pages:
 	c. logo
 	d. title
 	e. form 
+	f. slider. 
 2- Item page: (Amnah)
 	a. navigation bar
 	b. list of items
@@ -41,6 +42,9 @@ More details about the pages:
 	c. checkout button.
 	d. continue shopping button
 	e. remove item button.
-4- testimonials. TBA (Farah)
+4- testimonials. (Farah)
+	a. reviews for three different people.
+	b. navigation bar.
+	c. input text for the users feedback.
 4- making of page: TBA (Hussain)
 5- our story: TBA (Hussain)
