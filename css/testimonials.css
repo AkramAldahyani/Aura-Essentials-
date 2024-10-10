@@ -68,3 +68,141 @@ body {
       border-bottom: 2px solid purple;
   }
   /** Container end */
+ 
+
+  .small-card{
+  
+    margin-top: 50px;
+    margin-bottom: 40px;
+    text-align: center;
+  
+  }
+  .contain{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    padding: 10px;
+    gap: 5px;
+  }
+  .cards{
+    display:flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    background-color: #fec5bb;
+    width: 350px;
+    height: 450px;
+    margin: 5px;
+    border-radius: 10px;
+    text-align:center;
+  
+  }
+  .avatar{
+    width: 100px;
+    height: 100px;
+    border-radius: 60%;
+    object-fit: cover;
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
+  
+  .review{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: #fae1dd;
+    padding: 20px;
+    width: 250px;
+    height: 200px;
+    border-radius: 10px;
+    margin-top: 20px;
+   
+  }
+
+  .review p{
+    margin: 0;
+    text-align: center;
+   
+  }
+
+  .review img{
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    margin-bottom: 10px;
+  
+  }
+
+.stars{
+margin-top: 10px;
+}
+
+.star{
+  font-size: 45px;
+  color: gold;
+}
+
+.feedback-section{
+  margin-top: 50px;
+  margin-bottom: 20px;
+  text-align: center;
+
+}
+
+.feedback-section label{
+ display: block;
+ font-size: 30px;
+ margin-bottom: 40px;
+
+}
+
+textarea{
+  width: 60%;
+  padding: 12px;
+  font-size: 20px;
+  background-color: #d8e2dc;
+  border-radius: 5px;
+  border: 2px solid black;
+  resize: vertical;
+}
+
+.submit-container{
+  margin-top: 20px;
+}
+
+.submit-btn{
+  padding: 5px 30px;
+  font-size: 20px;
+  color: black;
+  border: 2px solid black;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+.submit-btn:hover{
+  background-color:#9D8189 ;
+}
+
+.rectangle{
+  width: 100%;
+  padding: 12px;
+  font-size: 20px;
+  background-color: #d8e2dc;
+  border-radius: 5px;
+  resize: vertical;
+}
+
+.rec-section{
+  margin-top: 50px;
+  margin-bottom: 20px;
+  text-align: center;
+
+}
+
+.rec-section label{
+ display: block;
+ font-size: 30px;
+ margin-bottom: 40px;
+}
