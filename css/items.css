@@ -68,3 +68,128 @@ body {
       border-bottom: 2px solid purple;
   }
   /** Container end */
+  body {
+    background-color: #F8EDEB;
+    color: #9D8189;
+    justify-content: center;
+    align-items: center;
+
+}
+
+h1,h2,p {
+    text-align: center;
+    font-weight: bold;
+    text-shadow: 
+    -0.1px -0.1px 0 black,
+    0.1px -0.1px 0 black,
+    -0.1px 0.1px 0 black,
+    0.1px 0.1px 0 black;
+}
+div.container{
+    justify-content: center;
+    gap:20px;
+    display: flex;
+    flex-wrap: wrap;
+}
+div.circle {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    overflow: hidden;
+    display:flex;
+    box-shadow: 2px 2px;
+}
+img.cir {
+    width: auto;
+    max-height: 100%;
+    object-fit: contain;
+}
+div.item{
+    text-align: center;
+    margin: 2px;
+    transform: 0.3s ;
+}
+div.card{
+    background-color: transparent;
+    width:200px;
+    height: 300px;
+    perspective: 1000px;
+    cursor: grab;
+    display: inline-flex;
+    margin: 20px;
+}
+div.card-container{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transition-duration:  0.6s;
+    transform-style: preserve-3d ;
+    border: 1px 2px;
+}
+div.card:hover div.card-container{
+    transform: rotateY(180deg);
+}
+div.card-front , div.card-back{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    -webkit-backface-visibility: hidden;
+}
+div.card-back{
+    transform: rotateY(180deg);
+    background-color: whitesmoke;
+    border-radius: 8px;
+    
+}
+div.Card-content{
+    padding: 5px;
+    font-size: 85%;
+}
+div.Product-name{
+    font-weight: bold;
+    
+}
+
+div.Price{
+    font-size: large;
+    font-weight: bold;
+}
+img.car{
+    width: 100%;
+    height: 100%;
+    border-radius: 8px;
+    
+}
+button.button{
+    border: none;
+    width: 180px;
+    text-align: center;
+    font-weight: bold;
+    color: red;
+    background-color: white;
+    padding: 3px;
+    font-size: medium;
+    margin: 5px;
+    transition-duration: 0.4s;
+    border-radius: 8px;
+}
+button.button:hover {
+    background-color: black;
+    color: white;
+}
+a.links {
+    cursor: grab;
+}
+div.item:hover{
+    transform: translateY(10px);
+}
+a.cat{
+    color: #826a71;
+    text-decoration: none;
+    font-size: medium;
+}
+a.cat:hover{
+    color: black;
+}
