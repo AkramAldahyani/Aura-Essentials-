@@ -12,6 +12,7 @@
       href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
       rel="stylesheet"
     />
+    
     <title>Home</title>
   </head>
   <body>
@@ -39,10 +40,106 @@
 
     <!-- start here -->
     <!-- main section which should contain overview about the website and images slider -->
-    <main></main>
+    <main>
+      <section class="container">
+        <div class="slider-wrapper">
+        <div class="slider">
+          <img id="slide-1" src="images/on sale.jpg" alt="picture about our sales"/>
+          <img id="slide-2" src="images/care.jpg" alt="picture about our proudect"/>
+          <img id="slide-3" src="images/offer.jpg" alt="picture about our offers"/>
+        </div>
+        <div class="slider-nav">
+          <a href="#slide-1"></a>
+          <a href="#slide-2"></a>
+          <a href="#slide-3"></a>
+        </div>
+        </div>
+      </section>
+    <!--begining of circles -->
+    <div class="container">
+      <h1 style="font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif" >Recommended skincare routine!</h1>
+      <hr>
+      <br>
+      <div class="steps">
+          <div class="step">
+              <h2>1</h2>
+              <p>Clean with "Cleanser"!</p>
+          </div>
+          <div class="step">
+              <h2>2</h2>
+              <p>Hydrate with "Moisturizer"!</p>
+          </div>
+          <div class="step">
+              <h2>3</h2>
+              <p>Glow with "Serum"!</p>
+          </div>
+          <div class="step">
+              <h2>4</h2>
+              <p>Protect with "sunscreen"!</p>
+          </div>
+      </div>
+  </div>
+<!--end of circle-->
 
-    <!-- asking for the user informaion -->
-    <form action="#" id="registeration"></form>
+<!--begin of overviwe-->
+<div class="container2">
+  <div class="overview">
+    <h3 class="heading">Refresh, Rejuvenate, Radiate: Your Journey to Beautiful Skin Starts Here!</h3>
+    <p class="paragraph">At Aura Essentials, we believe that beautiful skin is a reflection of inner health and well-being. Founded with a passion for skincare, our mission is to empower individuals to embrace their natural beauty through high-quality, effective products that nourish the skin and uplift the spirit.</p>
+  </div>
+  <div class="image">
+    <img class="img2" src="images/girl.jpg" alt="Beautiful Skin">
+  </div>
+</div>
+<!--end of overviwe-->
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+
+<!--begin of form-->
+<center>
+
+  <div class="regTable">
+  <h1>Registration Form</h1>
+  <table>
+  
+    <tr>
+      <td><label for="fn">First name: </label></td>
+      <td><input type="text" id="fn" name="fn" required placeholder="Eg: John" size="30"></td>
+    </tr>
+  
+    <tr>
+      <td><label for="ln">Last name: </label></td>
+      <td><input type="text" id="ln" name="ln" required placeholder="Eg: Smith" size="30"></td>
+    </tr>
+  
+    <tr>
+      <td><label for="email"> Email: </label></td>
+      <td><input type="email" id="email" required placeholder="Eg: JohnSmith7@example.com" size="30"></td>
+    </tr>
+  
+    <tr>
+      <td><label for="mobile"> Mobile Number: </label></td>
+      <td><input type="tel" id="mobile" maxlength="8" required placeholder="XXXX XXXX" size="30"><br>
+        </td>
+    </tr>
+  </table>
+  <br> <br>
+  
+  <center><input id="RegButton" type="submit" onclick="process()"></center>
+  </div>
+  
+  </center>
+<!--end of form-->
+
+    </main>
 
     <!-- contact us and links to social accounts -->
     <footer id="contact-us"></footer>
