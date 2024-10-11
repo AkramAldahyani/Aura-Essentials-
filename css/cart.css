@@ -1,70 +1,70 @@
 /**Container start */
 body {
-    background-color: #f8edeb;
-    font-family: 'Inter', sans-serif;
-    scroll-behavior: smooth;
-    box-sizing: border-box;
-  }
-  
-  a {
-    text-decoration: none;
-  }
-  header {
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-  }
-  .logo {
-    width: 100px;
-    border-radius: 50%;
-    border: 0.13em solid #f8edeb;
-    padding: 10px 7px;
-    transition: 0.5s ease;
-  }
-  .logo:hover{
-      border: 0.13em solid purple;
-      cursor: pointer;
-  }
-  #elem {
-      color: #9D8189;
-      font-size: 1em;
-      position: relative;
-      padding: 0 7px;
-      text-transform: uppercase;
-      overflow: hidden; 
-  }
-  
-  #elem::after {
-      content: '';
-      position: absolute;
-      left: 50%; 
-      bottom: 0;
-      width: 0; 
-      height: 2px; 
-      background: purple;
-      transition: width 0.3s ease, left 0.3s ease;
-  }
-  
-  #elem:hover {
-      color: purple;
-  }
-  
-  #elem:hover::after {
-      width: 100%; 
-      left: 0; 
-  }
-  .cart{
-      border-bottom:2px solid #9D8189;
-      color: #9D8189;
-      font-size: 1.1em;
-      position: relative;
-      padding: 0 7px;
-      text-transform: uppercase;
-      overflow: hidden; 
-  }
-  .cart:hover {
-      color: purple;
-      border-bottom: 2px solid purple;
-  }
-  /** Container end */
+  background-color: #f8edeb;
+  font-family: "Inter", sans-serif;
+  scroll-behavior: smooth;
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+}
+header {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.logo {
+  width: 100px;
+  border-radius: 50%;
+  border: 0.13em solid #f8edeb;
+  padding: 10px 7px;
+  transition: 0.5s ease;
+}
+.logo:hover {
+  border: 0.13em solid purple;
+  cursor: pointer;
+}
+#elem {
+  color: #9d8189;
+  font-size: 1em;
+  position: relative;
+  padding: 0 7px;
+  text-transform: uppercase;
+  overflow: hidden;
+}
+
+#elem::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  bottom: 0;
+  width: 0;
+  height: 2px;
+  background: purple;
+  transition: width 0.3s ease, left 0.3s ease;
+}
+
+#elem:hover {
+  color: purple;
+}
+
+#elem:hover::after {
+  width: 100%;
+  left: 0;
+}
+.cart {
+  border-bottom: 2px solid #9d8189;
+  color: #9d8189;
+  font-size: 1.1em;
+  position: relative;
+  padding: 0 7px;
+  text-transform: uppercase;
+  overflow: hidden;
+}
+.cart:hover {
+  color: purple;
+  border-bottom: 2px solid purple;
+}
+/** Container end */
