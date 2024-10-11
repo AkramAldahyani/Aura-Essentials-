@@ -53,8 +53,8 @@ header {
 }
 
 #elem:hover {
-  color: purple;
-}
+    color: purple;
+  }
 
 #elem:hover::after {
   width: 100%;
@@ -208,13 +208,7 @@ a.cat{
     font-size: medium;
     font-weight: bold;
 }
-a.cat:hover{
-    color: rgb(185, 133, 133);
-    text-decoration: underline;
-    transform: 0.3s ;
-    animation:both;
-    
-}
+
 html{
     scroll-behavior: smooth;
 }
@@ -239,8 +233,4 @@ hr{
 ::-webkit-scrollbar-thumb:hover {
     background: #8e8e8e;
 }
-#elem{
-    color:#9d8189;
-    font-size: 1em;
 
-}
