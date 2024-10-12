@@ -118,7 +118,6 @@ div.card{
     width:200px;
     height: 300px;
     perspective: 1000px;
-    cursor: pointer;
     display: inline-flex;
     margin: 20px;
 }
@@ -187,6 +186,7 @@ button.button{
     margin: 10px;
     transition-duration: 0.4s;
     border-radius: 8px;
+    cursor: pointer;
     
 }
 button.button:hover {
