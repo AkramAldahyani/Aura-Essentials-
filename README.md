@@ -49,5 +49,3 @@ More details about the pages:
 	c. input text for the users feedback.
 4- making of page: TBA (Hussain)
 5- our story: TBA (Hussain)
-
-this is a test
