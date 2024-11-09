@@ -2,6 +2,8 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
+    <!-- this script is used for icons -->
+    <script src="https://kit.fontawesome.com/bc1f839026.js" crossorigin="anonymous"></script>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="css/home.css" />
@@ -22,17 +24,20 @@
         ><img src="images/logo.jpg" alt="logo" class="logo"
       /></a>
       <div class="nav-bar">
-        <a href="home.html" class="home">Home</a>
+        <a href="home.html" class="home" >Home</a>
         <a href="items.html" class="shop" id="elem">Shop</a>
         <a href="cart.html" class="cart" id="elem">Shopping Cart</a>
         <a href="testimonials.html" class="test" id="elem">Tesimonials</a>
         <a href="making-of.html" class="make" id="elem">Making of</a>
         <a href="our-story.html" class="story" id="elem">Our Story</a>
       </div>
-      <div>
-        <a href="#registeration" class="register" id="elem">Register</a>
+      <div class="reg">
+        <a href="#registration"><i class="fa-regular fa-user fa-lg"></i></a>
+        
+        <a href="#registration" class="register" id="elem">Register</a>
       </div>
     </header>
+    <hr />
     <!-- !Header end -->
 
     <!-- start here -->
@@ -68,7 +73,7 @@
       <!--begining of circles -->
       <div class="container">
         <h1>Recommended skincare routine!</h1>
-        <hr style="width: 75%; border-color: purple;"/>
+        <hr style="width: 75%; border-color: purple; margin: 2em auto; margin-top: -1em;"/>
         <br />
         <div class="steps">
           <div class="step">
@@ -114,13 +119,46 @@
   <hr class="sHr">
 
       <!-- !begin of form-->
-     
+      <div class="form-container">
+        <form action="GET" id="registration" class="registration-form">
+          <h2>Register</h2>
+          <div>
+            <label for="fname">First Name</label>
+            <input type="text" id="fname" name="fname" placeholder="Enter your first name" required>
+          </div>
+          <div>
+            <label for="lname">Last Name</label>
+            <input type="text" id="lname" name="lname" placeholder="Enter your last name" required>
+          </div>
+          <div>
+            <label for="email">E-mail</label>
+            <input type="email" id="email" name="email" placeholder="Enter your e-mail" required>
+          </div>
+          <div>
+            <label for="phone">Phone Number</label>
+            <input type="tel" id="phone" name="phone" placeholder="Enter your phone number" maxlength="8" minlength="8" required>
+          </div>
+          <input type="submit" value="Register">
+        </form>
+      </div>
+
+
       <!-- !end of form-->
     </main>
 
     <!-- contact us and links to social accounts -->
-    <footer id="contact-us">
-
+     <!-- !footer start -->
+     <footer>
+      <div class="copy">
+        <img src="images/logo.jpg" alt="logo" class="footer-logo">
+        <p>&copy; 2024 Aura Essentials. All rights reserved.</p>
+      </div>
+      <div class="contact">
+        <a href="https://www.instagram.com/" target="_blank"><i class="fa-brands fa-instagram fa-xl"></i></a>
+        <a href="mailto:202303038@student.polytechnic.bh"><i class="fa-regular fa-envelope fa-xl"></i></a>
+        <a href="https://github.com/" target="_blank"><i class="fa-brands fa-github fa-xl"></i></a>
+      </div>
     </footer>
+    <!-- !footer end -->
   </body>
 </html>

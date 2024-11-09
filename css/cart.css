@@ -1,9 +1,17 @@
 /**Container start */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html {
+  scroll-behavior: smooth;
+}
 body {
   background-color: #f8edeb;
   font-family: "Inter", sans-serif;
-  scroll-behavior: smooth;
   box-sizing: border-box;
+  min-width: 60em;
 }
 
 a {
@@ -15,8 +23,16 @@ header {
   justify-content: space-between;
   align-items: center;
 }
+.reg {
+  display: flex;
+  cursor: pointer;
+}
+.reg a{
+  padding-right: 0.2em;
+  color: black;
+}
 .logo {
-  width: 100px;
+  width: 80px;
   border-radius: 50%;
   border: 0.13em solid #f8edeb;
   padding: 10px 7px;
@@ -68,3 +84,43 @@ header {
   border-bottom: 2px solid purple;
 }
 /** Container end */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* !scroll bar */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 0;
+}
+::-webkit-scrollbar-thumb {
+  background: #888; 
+  border-radius: 5px; 
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+/* !end scroll bar */
