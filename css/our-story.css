@@ -89,7 +89,6 @@ header {
 .opening-statement {
   text-align: center;
   font-size: 2em;
-  font-style: italic;
   font-weight: 500;
   margin: 1em;
 }
@@ -100,8 +99,21 @@ header {
 
 .content h2 {
   margin-top: 1.7em;
+  font-weight: 450;
 }
-
+.content p {
+  padding-top: 0.5em;
+}
+.content ul {
+  padding-left: 2em;
+  padding-top: 0.5em;
+}
+.content li {
+  padding-top: 0.4em;
+}
+.content span {
+  font-weight: 600;
+}
 /* !content end */
 
 /*! footer start */

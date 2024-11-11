@@ -14,22 +14,23 @@
       href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
       rel="stylesheet"
     />
-
+    
     <title>Home</title>
   </head>
   <body>
+    <div id="div"></div>
     <!--! header or navigation bar start-->
     <header class="header">
       <a href="home.html"
         ><img src="images/logo.jpg" alt="logo" class="logo"
       /></a>
       <div class="nav-bar">
-        <a href="home.html" class="home" >Home</a>
-        <a href="items.html" class="shop" id="elem">Shop</a>
-        <a href="cart.html" class="cart" id="elem">Shopping Cart</a>
-        <a href="testimonials.html" class="test" id="elem">Tesimonials</a>
-        <a href="making-of.html" class="make" id="elem">Making of</a>
-        <a href="our-story.html" class="story" id="elem">Our Story</a>
+        <a href="home.html" id="home" >Home</a>
+        <a href="items.html" id="shop" class="elem">Shop</a>
+        <a href="cart.html" id="cart" class="elem">Shopping Cart</a>
+        <a href="testimonials.html" id="test" class="elem">Tesimonials</a>
+        <a href="making-of.html" id="make" class="elem">Making of</a>
+        <a href="our-story.html" id="story" class="elem">Our Story</a>
       </div>
       <div class="reg">
         <a href="#registration"><i class="fa-regular fa-user fa-lg"></i></a>
@@ -117,10 +118,9 @@
       </div>
       <!--end of overviwe-->
   <hr class="sHr">
-
       <!-- !begin of form-->
       <div class="form-container">
-        <form action="GET" id="registration" class="registration-form">
+        <form action="home.html" id="registration" class="registration-form">
           <h2>Register</h2>
           <div>
             <label for="fname">First Name</label>
@@ -141,8 +141,6 @@
           <input type="submit" value="Register">
         </form>
       </div>
-
-
       <!-- !end of form-->
     </main>
 
@@ -160,5 +158,6 @@
       </div>
     </footer>
     <!-- !footer end -->
+    <script src="scripts/registration.js"></script>
   </body>
 </html>

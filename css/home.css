@@ -42,7 +42,7 @@ header {
   border: 0.13em solid purple;
   cursor: pointer;
 }
-#elem {
+.elem {
   color: #9d8189;
   font-size: 1em;
   position: relative;
@@ -51,7 +51,7 @@ header {
   overflow: hidden;
 }
 
-#elem::after {
+.elem::after {
   content: "";
   position: absolute;
   left: 50%;
@@ -62,15 +62,15 @@ header {
   transition: width 0.3s ease, left 0.3s ease;
 }
 
-#elem:hover {
+.elem:hover {
   color: purple;
 }
 
-#elem:hover::after {
+.elem:hover::after {
   width: 100%;
   left: 0;
 }
-.home {
+#home {
   border-bottom: 2px solid #9d8189;
   color: #9d8189;
   font-size: 1.1em;
@@ -79,7 +79,7 @@ header {
   text-transform: uppercase;
   overflow: hidden;
 }
-.home:hover {
+#home:hover {
   color: purple;
   border-bottom: 2px solid purple;
 }
