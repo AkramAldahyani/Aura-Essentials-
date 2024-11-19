@@ -1,4 +1,4 @@
-/**Container start */
+*Container start */
 * {
   margin: 0;
   padding: 0;
@@ -299,4 +299,4 @@ footer {
 ::-webkit-scrollbar-thumb:hover {
   background: #555;
 }
-/* !end scroll bar */
+/* !end scroll bar

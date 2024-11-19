@@ -1,12 +1,14 @@
-<!-- ! Akram -->
 <!DOCTYPE html>
 <html lang="en">
   <head>
     <!-- this script is used for icons -->
-    <script src="https://kit.fontawesome.com/bc1f839026.js" crossorigin="anonymous"></script>
+    <script
+      src="https://kit.fontawesome.com/bc1f839026.js"
+      crossorigin="anonymous"
+    ></script>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="css/cart.css" />
+    <link rel="stylesheet" href="css/home.css" />
     <!-- inporting google fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -14,32 +16,49 @@
       href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
       rel="stylesheet"
     />
-    <title>Cart</title>
+    <script src="scripts/script.js"></script>
+    <title>Home</title>
+    <style>
+      #cart {
+        border-bottom: 2px solid #9d8189;
+        color: #9d8189;
+        font-size: 1.1em;
+        position: relative;
+        padding: 0 7px;
+        text-transform: uppercase;
+        overflow: hidden;
+      }
+      #cart:hover {
+        color: purple;
+        border-bottom: 2px solid purple;
+      }
+    </style>
   </head>
   <body>
+    <div id="div"></div>
     <!--! header or navigation bar start-->
     <header class="header">
       <a href="home.html"
         ><img src="images/logo.jpg" alt="logo" class="logo"
       /></a>
       <div class="nav-bar">
-        <a href="home.html" class="home" id="elem">Home</a>
-        <a href="items.html" class="shop" id="elem">Shop</a>
-        <a href="cart.html" class="cart" >Shopping Cart</a>
-        <a href="testimonials.html" class="test" id="elem">Tesimonials</a>
-        <a href="making-of.html" class="make" id="elem">Making of</a>
-        <a href="our-story.html" class="story" id="elem">Our Story</a>
+        <a href="home.html" id="home" class="nav-link">Home</a>
+        <a href="items.html" id="shop" class="nav-link">Shop</a>
+        <a href="cart.html" id="cart">Shopping Cart</a>
+        <a href="testimonials.html" id="test" class="nav-link">Testimonials</a>
+        <a href="making-of.html" id="make" class="nav-link">Making of</a>
+        <a href="our-story.html" id="story" class="nav-link">Our Story</a>
       </div>
+
       <div class="reg">
-        <a href="#registration"><i class="fa-regular fa-user fa-lg"></i></a>
-        
-        <a href="#registeration" class="register" id="elem">Register</a>
+        <a href="/home.html#registration"
+          ><i class="fa-regular fa-user fa-lg"></i
+        ></a>
+
+        <a href="#" id="register">Register</a>
       </div>
     </header>
     <hr />
     <!-- !Header end -->
-<!-- git  -->
-    <!-- contact us and links to social accounts -->
-    <footer id="contact-us"></footer>
   </body>
 </html>

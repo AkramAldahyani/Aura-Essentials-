@@ -1,9 +1,11 @@
-<!--! bayan -->
 <!DOCTYPE html>
 <html lang="en">
   <head>
     <!-- this script is used for icons -->
-    <script src="https://kit.fontawesome.com/bc1f839026.js" crossorigin="anonymous"></script>
+    <script
+      src="https://kit.fontawesome.com/bc1f839026.js"
+      crossorigin="anonymous"
+    ></script>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="css/home.css" />
@@ -14,8 +16,23 @@
       href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
       rel="stylesheet"
     />
-    
+    <script src="scripts/script.js"></script>
     <title>Home</title>
+    <style>
+      #home {
+        border-bottom: 2px solid #9d8189;
+        color: #9d8189;
+        font-size: 1.1em;
+        position: relative;
+        padding: 0 7px;
+        text-transform: uppercase;
+        overflow: hidden;
+      }
+      #home:hover {
+        color: purple;
+        border-bottom: 2px solid purple;
+      }
+    </style>
   </head>
   <body>
     <div id="div"></div>
@@ -25,17 +42,18 @@
         ><img src="images/logo.jpg" alt="logo" class="logo"
       /></a>
       <div class="nav-bar">
-        <a href="home.html" id="home" >Home</a>
-        <a href="items.html" id="shop" class="elem">Shop</a>
-        <a href="cart.html" id="cart" class="elem">Shopping Cart</a>
-        <a href="testimonials.html" id="test" class="elem">Tesimonials</a>
-        <a href="making-of.html" id="make" class="elem">Making of</a>
-        <a href="our-story.html" id="story" class="elem">Our Story</a>
+        <a href="home.html" id="home">Home</a>
+        <a href="items.html" id="shop" class="nav-link">Shop</a>
+        <a href="cart.html" id="cart" class="nav-link">Shopping Cart</a>
+        <a href="testimonials.html" id="test" class="nav-link">Testimonials</a>
+        <a href="making-of.html" id="make" class="nav-link">Making of</a>
+        <a href="our-story.html" id="story" class="nav-link">Our Story</a>
       </div>
+
       <div class="reg">
         <a href="#registration"><i class="fa-regular fa-user fa-lg"></i></a>
-        
-        <a href="#registration" class="register" id="elem">Register</a>
+
+        <a href="#registration" id="register">Register</a>
       </div>
     </header>
     <hr />
@@ -70,11 +88,18 @@
           </div>
         </div>
       </section>
-      <hr class="Hr">
+      <hr class="Hr" />
       <!--begining of circles -->
       <div class="container">
         <h1>Recommended skincare routine!</h1>
-        <hr style="width: 75%; border-color: purple; margin: 2em auto; margin-top: -1em;"/>
+        <hr
+          style="
+            width: 75%;
+            border-color: purple;
+            margin: 2em auto;
+            margin-top: -1em;
+          "
+        />
         <br />
         <div class="steps">
           <div class="step">
@@ -104,7 +129,7 @@
             Refresh, Rejuvenate, Radiate: Your Journey to Beautiful Skin Starts
             Here!
           </h3>
-          <p class="paragraph" >
+          <p class="paragraph">
             At Aura Essentials, we believe that beautiful skin is a reflection
             of inner health and well-being. Founded with a passion for skincare,
             our mission is to empower individuals to embrace their natural
@@ -117,47 +142,77 @@
         </div>
       </div>
       <!--end of overviwe-->
-  <hr class="sHr">
-      <!-- !begin of form-->
-      <div class="form-container">
+      <hr class="sHr" />
+      <!-- !form start-->
+      <div class="form-container" id="form-div">
         <form action="home.html" id="registration" class="registration-form">
           <h2>Register</h2>
           <div>
             <label for="fname">First Name</label>
-            <input type="text" id="fname" name="fname" placeholder="Enter your first name" required>
+            <input
+              type="text"
+              id="fname"
+              name="fname"
+              placeholder="Enter your first name"
+              required
+            />
           </div>
           <div>
             <label for="lname">Last Name</label>
-            <input type="text" id="lname" name="lname" placeholder="Enter your last name" required>
+            <input
+              type="text"
+              id="lname"
+              name="lname"
+              placeholder="Enter your last name"
+              required
+            />
           </div>
           <div>
             <label for="email">E-mail</label>
-            <input type="email" id="email" name="email" placeholder="Enter your e-mail" required>
+            <input
+              type="email"
+              id="email"
+              name="email"
+              placeholder="Enter your e-mail"
+              required
+            />
           </div>
           <div>
             <label for="phone">Phone Number</label>
-            <input type="tel" id="phone" name="phone" placeholder="Enter your phone number" maxlength="8" minlength="8" required>
+            <input
+              type="tel"
+              id="phone"
+              name="phone"
+              placeholder="Enter your phone number"
+              maxlength="8"
+              required
+            />
           </div>
-          <input type="submit" value="Register">
+          <input type="submit" value="Register" onclick="return checkInfo()" />
         </form>
       </div>
-      <!-- !end of form-->
+      <!-- !form end-->
     </main>
-
+    <a href="#" onclick="logout()">Logout</a>
     <!-- contact us and links to social accounts -->
-     <!-- !footer start -->
-     <footer>
+    <!-- !footer start -->
+    <footer>
       <div class="copy">
-        <img src="images/logo.jpg" alt="logo" class="footer-logo">
+        <img src="images/logo.jpg" alt="logo" class="footer-logo" />
         <p>&copy; 2024 Aura Essentials. All rights reserved.</p>
       </div>
-      <div class="contact">
-        <a href="https://www.instagram.com/" target="_blank"><i class="fa-brands fa-instagram fa-xl"></i></a>
-        <a href="mailto:202303038@student.polytechnic.bh"><i class="fa-regular fa-envelope fa-xl"></i></a>
-        <a href="https://github.com/" target="_blank"><i class="fa-brands fa-github fa-xl"></i></a>
+      <div class="contact-us">
+        <a href="https://www.instagram.com/" target="_blank"
+          ><i class="fa-brands fa-instagram fa-xl"></i
+        ></a>
+        <a href="mailto:202303038@student.polytechnic.bh"
+          ><i class="fa-regular fa-envelope fa-xl"></i
+        ></a>
+        <a href="https://github.com/" target="_blank"
+          ><i class="fa-brands fa-github fa-xl"></i
+        ></a>
       </div>
     </footer>
     <!-- !footer end -->
-    <script src="scripts/registration.js"></script>
   </body>
 </html>
