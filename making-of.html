@@ -8,7 +8,7 @@
     ></script>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="css/home.css" />
+    <link rel="stylesheet" href="css/styles.css" />
     <!-- inporting google fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -16,8 +16,8 @@
       href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
       rel="stylesheet"
     />
-    <script src="scripts/script.js"></script>
-    <title>Home</title>
+
+    <title>Making of</title>
     <style>
       #make {
         border-bottom: 2px solid #9d8189;
@@ -70,7 +70,7 @@
       <div class="reg">
         <a href="#"><i class="fa-regular fa-user fa-lg"></i></a>
 
-        <a href="#" id="register">Register</a>
+        <a href="home.html#registration" id="register">Register</a>
       </div>
     </header>
     <hr />
@@ -84,7 +84,7 @@
         highlighting the tools used, images of the design stages, and detailed
         descriptions of each design
       </p>
-      <div class="container">
+      <div class="make-container">
         <div class="make-card">
           <img src="images/template.png" alt="Template Photo" />
           <h2>Website's Tempate</h2>
@@ -196,8 +196,12 @@
         <a href="https://github.com/" target="_blank"
           ><i class="fa-brands fa-github fa-xl"></i
         ></a>
+        <a href="#logout" onclick="logout()"
+          ><i class="fa-solid fa-right-from-bracket fa-xl"></i
+        ></a>
       </div>
     </footer>
     <!-- !footer end -->
+    <script src="scripts/script.js"></script>
   </body>
 </html>

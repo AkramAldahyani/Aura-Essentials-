@@ -1,5 +1,8 @@
+// TODO: fix making of page -- start working on the shopping cart page.
+console.log("hello world")
 function checkInfo() {
   // This function checks for the user's information
+  //
   var firstName = document.getElementById("fname").value;
   firstName = firstName.charAt(0).toUpperCase() + firstName.slice(1);
   var lastName = document.getElementById("lname").value;
@@ -47,31 +50,43 @@ function welcome(first, last) {
 }
 
 //! fix this function later. make it looks better.
-//   ! fix the links in the other pages - create a single css file.
-window.onload = function () {
-  const navLinks = document.querySelectorAll(".nav-link");
-  navLinks.forEach((link) => {
-    link.addEventListener("click", function (event) {
-      const firstName = localStorage.getItem("firstName");
-      if (!firstName) {
-        alert("Please register first before accessing this page.");
-        event.preventDefault();
-        window.location.href = "home.html";
-      }
+document.addEventListener("DOMContentLoaded", function () {
+    const navLinks = document.querySelectorAll(".nav-link");
+    const firsName = localStorage.getItem("firstName");
+    // console.log(document.title)
+    if (!firsName && document.title != "Home") {
+      window.location.href = "home.html";
+    }
+    
+    // Check if the user is registered before navigating
+    navLinks.forEach((link) => {
+      link.addEventListener("click", function (event) {
+        const firstName = localStorage.getItem("firstName");
+        if (!firstName) {
+          alert("Please register first before accessing this page.");
+          event.preventDefault(); // Prevent navigation
+          window.location.href = "home.html"; // Redirect to home page
+        }
+      });
     });
+  
+    // Check if a user is registered and update the page accordingly
+    const firstName = localStorage.getItem("firstName");
+    if (firstName) {
+      // If firstName exists in localStorage, update UI elements
+      const div = document.getElementById("form-div");
+      if (div) div.remove(); // Only remove form-div if it exists
+  
+      const registerElement = document.getElementById("register");
+      if (registerElement) {
+        registerElement.textContent = firstName; // Set the text to firstName
+        registerElement.href = "#"; // Disable the link (optional)
+      }
+    }
   });
-
-  const firstName = localStorage.getItem("firstName");
-  if (firstName) {
-    var div = document.getElementById("form-div");
-    div.remove();
-    document.getElementById("register").textContent = firstName;
-    document.getElementById("register").href = "#";
-  }
-};
-
+  
 function logout() {
-  //! delete this function later
+  
   localStorage.removeItem("firstName");
   window.location.reload();
 }

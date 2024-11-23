@@ -1,0 +1,422 @@
+[
+  {
+    "id": 1,
+    "name": "The Ordinary Glucoside Foaming Cleanser",
+    "price": 6.50,
+    "image": "images/The Ordinary GLUCOSIDE FOAMING CLEANSER - Gesichtsreinigung - -.jpeg"
+  },
+  {
+    "id": 2,
+    "name": "BYOMA Creamy Jelly Cleanser",
+    "price": 6.00,
+    "image": "images/Byoma jelly cleanser.jpeg"
+  },
+  {
+    "id": 3,
+    "name": "SVR SebiaclearFoaming Gel",
+    "price": 12.00,
+    "image": "images/SVR.jpg"
+  },
+  {
+    "id": 4,
+    "name": "Anthony Shave Cream",
+    "price": 22.00,
+    "image": "images/Anthony.jpg"
+  },
+  {
+    "id": 5,
+    "name": "Bj Beauty Carrabiomex Grinder Cleaning Balm",
+    "price": 10.00,
+    "image": "images/BJ Beauty.jpg"
+  },
+  {
+    "id": 6,
+    "name": "Rovectin Skin Essentials Pore Care Tightening Cleansing Foam",
+    "price": 10.00,
+    "image": "images/c6.jpg"
+  },
+  {
+    "id": 7,
+    "name": "Germaine de Capuccini Purexpert Extra Comfort Cleansing Gel",
+    "price": 23.00,
+    "image": "images/c7.jpg"
+  },
+  {
+    "id": 8,
+    "name": "Mizon Pore Refine Deep Cleansing Foam",
+    "price": 11.00,
+    "image": "images/c8.jpg"
+  },
+  {
+    "id": 9,
+    "name": "Lyn Skincare Purifying Peeling",
+    "price": 11.00,
+    "image": "images/c9.jpg"
+  },
+  {
+    "id": 10,
+    "name": "Lyn Skincare Face Cleansing Gel",
+    "price": 11.00,
+    "image": "images/c10.jpg"
+  },
+  {
+    "id": 11,
+    "name": "Gerovital H3 Sun Sunscreen Milk SPF50",
+    "price": 15.00,
+    "image": "images/tan1.jpg"
+  },
+  {
+    "id": 12,
+    "name": "Locherber Sun Pure High Protection SPF50",
+    "price": 13.00,
+    "image": "images/tan2.jpg"
+  },
+  {
+    "id": 13,
+    "name": "Locherber Sun Pure Abracadabra Self Tanning",
+    "price": 9.00,
+    "image": "images/tan3.jpg"
+  },
+  {
+    "id": 14,
+    "name": "Declaré Switzerland Hyaluron Boost After Sun Body Lotion",
+    "price": 20.00,
+    "image": "images/tan4.jpg"
+  },
+  {
+    "id": 15,
+    "name": "Bali Body Ultra Dark Self Tanning Mousse",
+    "price": 24.00,
+    "image": "images/tan5.jpg"
+  },
+  {
+    "id": 16,
+    "name": "Lagoon Bronze Effect Tanning Oil",
+    "price": 17.00,
+    "image": "images/tan6.jpg"
+  },
+  {
+    "id": 17,
+    "name": "O!GET! Pink Collagen Capsule Sunscreen SPF50+",
+    "price": 9.00,
+    "image": "images/tan7.jpg"
+  },
+  {
+    "id": 18,
+    "name": "ISIS Pharma Uveblock SPF50+ Dry Touch",
+    "price": 13.00,
+    "image": "images/tan8.jpg"
+  },
+  {
+    "id": 19,
+    "name": "Caramel Deep Dark Tanning Oil",
+    "price": 13.00,
+    "image": "images/tan9.jpg"
+  },
+  {
+    "id": 20,
+    "name": "Babaria Tropical Kisses Passion Fruit & Guava Tanning Jelly SPF0",
+    "price": 17.00,
+    "image": "images/tan10.jpg"
+  },
+  {
+    "id": 21,
+    "name": "Carbon Theory Anti-Breakout Facial Moisturiser",
+    "price": 7.00,
+    "image": "images/carbon threoy.jpg"
+  },
+  {
+    "id": 22,
+    "name": "Dermaceutic Regen Ceutic Nourishing Hydrating Cream",
+    "price": 34.00,
+    "image": "images/2.jpg"
+  },
+  {
+    "id": 23,
+    "name": "Real Barrier Aqua Soothing Cream",
+    "price": 16.00,
+    "image": "images/3.jpg"
+  },
+  {
+    "id": 24,
+    "name": "Novaclear Firming Neck & Décolletage Cream",
+    "price": 15.00,
+    "image": "images/4.jpg"
+  },
+  {
+    "id": 25,
+    "name": "La Prairie Life Matrix Haute Rejuvenation Cream",
+    "price": 763.00,
+    "image": "images/5.jpg"
+  },
+  {
+    "id": 26,
+    "name": "Beesline Adaptogen Barrier Cream",
+    "price": 13.00,
+    "image": "images/BYOMA Gel Cream Moisturizer - 1_69 fl oz.jpeg"
+  },
+  {
+    "id": 27,
+    "name": "Locherber Brightening Face Cream",
+    "price": 24.00,
+    "image": "images/moss7.jpg"
+  },
+  {
+    "id": 28,
+    "name": "Rovectin Skin Essentials Cica Care Relief Sleeping Pack",
+    "price": 15.00,
+    "image": "images/moss8.jpg"
+  },
+  {
+    "id": 29,
+    "name": "O!GET! Vitamin C Glow Serum Mist",
+    "price": 8.00,
+    "image": "images/moss9.jpg"
+  },
+  {
+    "id": 30,
+    "name": "BYOMA Moisturizer Gel Cream",
+    "price": 6.75,
+    "image": "images/moss10.jpg"
+  },
+  {
+    "id": 31,
+    "name": "PIXI BeautifEYE Vitamin-C & Licorice",
+    "price": 12.50,
+    "image": "images/Pixi BeautifEYE Brightening Eye Patches with Vitamin C - 60ct.jpeg"
+  },
+  {
+    "id": 32,
+    "name": "Eucerin Even Pigment Perfector Eye Care Cream",
+    "price": 27.00,
+    "image": "images/111.jpg"
+  },
+  {
+    "id": 33,
+    "name": "QV QV Face Revitalising Eye Cream",
+    "price": 15.00,
+    "image": "images/222.jpg"
+  },
+  {
+    "id": 34,
+    "name": "M.Asam Vino Gold Eye Cream",
+    "price": 11.00,
+    "image": "images/333.jpg"
+  },
+  {
+    "id": 35,
+    "name": "Dr.Ceuracle Vegan Active Berry Firming Eye Cream",
+    "price": 22.00,
+    "image": "images/444.jpg"
+  },
+  {
+    "id": 36,
+    "name": "HubisLab Premium Active Eternal Eye & Face Cream",
+    "price": 32.00,
+    "image": "images/555.jpg"
+  },
+  {
+    "id": 37,
+    "name": "Bioderma Atoderm Intensive Eye Cream",
+    "price": 12.00,
+    "image": "images/eye7.jpg"
+  },
+  {
+    "id": 38,
+    "name": "Locherber Essential Eye Gel",
+    "price": 24.00,
+    "image": "images/eye 8.jpg"
+  },
+  {
+    "id": 39,
+    "name": "Mizon Collagen Power Firming Eye Cream",
+    "price": 11.00,
+    "image": "images/eye9.jpg"
+  },
+  {
+    "id": 40,
+    "name": "Histomer Eye Firming Refining Cream",
+    "price": 40.00,
+    "image": "images/eye10.jpg"
+  },
+  {
+    "id": 41,
+    "name": "LANEIGE Lip Sleeping Mask",
+    "price": 13.00,
+    "image": "images/LANEIGE Lip Sleeping Mask_ Nourish, Hydrate, Vitamin C, Antioxidants, Flaky, Dry Lips.jpeg"
+  },
+  {
+    "id": 42,
+    "name": "TATCHA The Kissu Lip Mask",
+    "price": 14.50,
+    "image": "images/lipcare2.jpg"
+  },
+  {
+    "id": 43,
+    "name": "PIXI +Hydra LipTreat - Tinted Lip Balm",
+    "price": 4.50,
+    "image": "images/lipcare3.jpg"
+  },
+  {
+    "id": 44,
+    "name": "FENTY SKIN Fenty Treatz Hydrating + Strengthening Lip Oil",
+    "price": 12.00,
+    "image": "images/lip care4.jpg"
+  },
+  {
+    "id": 45,
+    "name": "TATCHA The Kissu Lip Tint SPF 25",
+    "price": 21.00,
+    "image": "images/l5.jpg"
+  },
+  {
+    "id": 46,
+    "name": "NUDESTIX Hydrating Peptide Lip Butter",
+    "price": 8.50,
+    "image": "images/l7.jpg"
+  },
+  {
+    "id": 47,
+    "name": "Dr.Clinic Lip Sugar Scrub With Strawberry",
+    "price": 9.00,
+    "image": "images/l6.jpg"
+  },
+  {
+    "id": 48,
+    "name": "Jmela Soap Lip Scrub",
+    "price": 4.00,
+    "image": "images/l8.jpg"
+  },
+  {
+    "id": 49,
+    "name": "Gerovital Volume Booster Lip Cream",
+    "price": 24.00,
+    "image": "images/l9.jpg"
+  },
+  {
+    "id": 50,
+    "name": "GISOU Honey Infused Lip Oil",
+    "price": 14.25,
+    "image": "images/l10.jpg"
+  },
+  {
+    "id": 51,
+    "name": "Sisley Phyto-Blanc Targeted Dark Spot Corrector",
+    "price": 65.00,
+    "image": "images/11.jpg"
+  },
+  {
+    "id": 52,
+    "name": "La Mer The Deep Purifying Face Mask",
+    "price": 72.00,
+    "image": "images/22.jpg"
+  },
+  {
+    "id": 53,
+    "name": "ABC Hyaluronic Acid Serum",
+    "price": 19.00,
+    "image": "images/33.jpg"
+  },
+  {
+    "id": 54,
+    "name": "ABC Aloe Vera Gel with Tea Tree Oil",
+    "price": 9.00,
+    "image": "images/44.jpg"
+  },
+  {
+    "id": 55,
+    "name": "Rovectin Lotus Water Calming Sheet Mask",
+    "price": 3.00,
+    "image": "images/55.jpg"
+  },
+  {
+    "id": 56,
+    "name": "COSRX Pure Fit Cica Calming True Sheet Mask",
+    "price": 3.00,
+    "image": "images/mask6.jpg"
+  },
+  {
+    "id": 57,
+    "name": "Callys Pause en Altitude Balancing & Purifying Sheet Mask",
+    "price": 6.00,
+    "image": "images/mask7.jpg"
+  },
+  {
+    "id": 58,
+    "name": "Dr.Ceuracle Hyal Reyouth Hydrogel Neck Mask",
+    "price": 22.00,
+    "image": "images/mask8.jpg"
+  },
+  {
+    "id": 59,
+    "name": "Black & Brown Eilovy Charcoal Nose Pore Strips",
+    "price": 3.00,
+    "image": "images/mask9.jpg"
+  },
+  {
+    "id": 60,
+    "name": "Missha Speedy Solution Anti Trouble Patch Set",
+    "price": 4.00,
+    "image": "images/mask10.jpg"
+  },
+  {
+    "id": 61,
+    "name": "Anytime & Anywhere Wavy Silicone Ice Roller - Pink",
+    "price": 6.00,
+    "image": "images/tool1.jpg"
+  },
+  {
+    "id": 62,
+    "name": "Anytime & Anywhere Ice Roller Stainless Steel - Pink",
+    "price": 6.00,
+    "image": "images/tool2.jpg"
+  },
+  {
+    "id": 63,
+    "name": "Skin Roller System Derma Roller",
+    "price": 10.00,
+    "image": "images/tool3.jpg"
+  },
+  {
+    "id": 64,
+    "name": "Nascita Professional Facial Massager - Rose Gold",
+    "price": 6.00,
+    "image": "images/tool4.jpg"
+  },
+  {
+    "id": 65,
+    "name": "Nascita Professional Ice Globes Set",
+    "price": 34.00,
+    "image": "images/tool 5.jpg"
+  },
+  {
+    "id": 66,
+    "name": "Nascita Professional 3D Therapy Massager - Silver",
+    "price": 10.00,
+    "image": "images/rool6.jpg"
+  },
+  {
+    "id": 67,
+    "name": "Nascita Professional Natural Facial Massager Double Sided - Pink",
+    "price": 11.00,
+    "image": "images/tool7.jpg"
+  },
+  {
+    "id": 68,
+    "name": "CALA® Silicone Facial Mask Brush Set",
+    "price": 6.00,
+    "image": "images/tool8.jpg"
+  },
+  {
+    "id": 69,
+    "name": "INTER-VION Silicone Face Brush - Pink",
+    "price": 5.00,
+    "image": "images/tool9.jpg"
+  },
+  {
+    "id": 70,
+    "name": "INTER-VION Double-Sided Facial Cleansing Brush - Pink",
+    "price": 5.00,
+    "image": "images/tool10.jpg"
+  }
+]
