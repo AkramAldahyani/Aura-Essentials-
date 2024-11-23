@@ -67,11 +67,12 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 
   const firstName = localStorage.getItem("firstName");
-  if (firstName) { // If the first name exists
+  if (firstName) {
+    // If the first name exists
     const div = document.getElementById("form-div");
-    if (div){
+    if (div) {
       div.remove();
-    }  // Only remove form-div if it exists
+    } // Only remove form-div if it exists
 
     const registerElement = document.getElementById("register");
     if (registerElement) {
@@ -84,9 +85,23 @@ document.addEventListener("DOMContentLoaded", function () {
 function logout() {
   // This function logs the uer out
   const confirmation = window.confirm("Are you sure you want to log out?"); //Ask the user for confirmation
-// If true 
+  // If true
   if (confirmation) {
     localStorage.removeItem("firstName");
     window.location.reload();
   }
+}
+
+function feedbackThanks() {
+  var feedback = document.getElementById("feedback").value.trim();
+
+  // Check if the feedback is empty
+  if (feedback === "") {
+    alert("Please enter your feedback first.");
+    return;
+  }
+  
+  // Thank the user for their feedback
+  alert("Thank you for your feedback!");
+  window.location.reload();
 }
