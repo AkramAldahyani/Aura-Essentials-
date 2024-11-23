@@ -48,6 +48,7 @@ document.addEventListener("DOMContentLoaded", function () {
             <p style="text-align: center; color: gray; padding-top: 9em; font-size: 1.2em">Your cart is empty!</p>
           </div>
         `;
+        totalPriceDiv.innerHTML = `<h3>Total: 0.00 BD</h3>`;
       }
     }
   }
