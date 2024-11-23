@@ -1,12 +1,9 @@
-// TODO: fix making of page -- start working on the shopping cart page.
-console.log("hello world")
 function checkInfo() {
   // This function checks for the user's information
-  //
   var firstName = document.getElementById("fname").value;
-  firstName = firstName.charAt(0).toUpperCase() + firstName.slice(1);
+  firstName = firstName.charAt(0).toUpperCase() + firstName.slice(1); //Capitalize the first name
   var lastName = document.getElementById("lname").value;
-  lastName = lastName.charAt(0).toUpperCase() + lastName.slice(1);
+  lastName = lastName.charAt(0).toUpperCase() + lastName.slice(1); //Capitalize the last name
   var email = document.getElementById("email").value;
   var phoneNumber = document.getElementById("phone").value;
 
@@ -49,44 +46,47 @@ function welcome(first, last) {
   );
 }
 
-//! fix this function later. make it looks better.
 document.addEventListener("DOMContentLoaded", function () {
-    const navLinks = document.querySelectorAll(".nav-link");
-    const firsName = localStorage.getItem("firstName");
-    // console.log(document.title)
-    if (!firsName && document.title != "Home") {
-      window.location.href = "home.html";
-    }
-    
-    // Check if the user is registered before navigating
-    navLinks.forEach((link) => {
-      link.addEventListener("click", function (event) {
-        const firstName = localStorage.getItem("firstName");
-        if (!firstName) {
-          alert("Please register first before accessing this page.");
-          event.preventDefault(); // Prevent navigation
-          window.location.href = "home.html"; // Redirect to home page
-        }
-      });
-    });
-  
-    // Check if a user is registered and update the page accordingly
-    const firstName = localStorage.getItem("firstName");
-    if (firstName) {
-      // If firstName exists in localStorage, update UI elements
-      const div = document.getElementById("form-div");
-      if (div) div.remove(); // Only remove form-div if it exists
-  
-      const registerElement = document.getElementById("register");
-      if (registerElement) {
-        registerElement.textContent = firstName; // Set the text to firstName
-        registerElement.href = "#"; // Disable the link (optional)
+  const navLinks = document.querySelectorAll(".nav-link");
+  const firsName = localStorage.getItem("firstName");
+  //If the user is not registered and he is not in home page, redirect it to home page.
+  if (!firsName && document.title != "Home") {
+    window.location.href = "home.html";
+  }
+
+  // Check if the user is registered before navigating
+  navLinks.forEach((link) => {
+    link.addEventListener("click", function (event) {
+      const firstName = localStorage.getItem("firstName");
+      if (!firstName) {
+        alert("Please register first before accessing this page.");
+        event.preventDefault(); // Prevent navigation
+        window.location.href = "home.html"; // Redirect to home page
       }
-    }
+    });
   });
-  
+
+  const firstName = localStorage.getItem("firstName");
+  if (firstName) { // If the first name exists
+    const div = document.getElementById("form-div");
+    if (div){
+      div.remove();
+    }  // Only remove form-div if it exists
+
+    const registerElement = document.getElementById("register");
+    if (registerElement) {
+      registerElement.textContent = firstName; // Set the text to firstName
+      registerElement.href = "#"; // Disable the link (optional)
+    }
+  }
+});
+
 function logout() {
-  
-  localStorage.removeItem("firstName");
-  window.location.reload();
+  // This function logs the uer out
+  const confirmation = window.confirm("Are you sure you want to log out?"); //Ask the user for confirmation
+// If true 
+  if (confirmation) {
+    localStorage.removeItem("firstName");
+    window.location.reload();
+  }
 }
