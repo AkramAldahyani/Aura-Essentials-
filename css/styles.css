@@ -670,6 +670,66 @@ textarea {
   transform: translateY(-5px);
 }
 /* ? cart page end */
+/** our story start */
+.content h2 {
+  font-weight: 450;
+  text-align: left;
+  font-size: 1.5em;
+  margin-bottom: 10px;
+  color: #023E8A;
+}
+.content p {
+  line-height: 1.6;
+  padding-top: 0.5em;
+}
+.content-text p + p {
+  margin-top: 10px;
+}
+.content ul {
+  line-height: 1.6;
+  padding-top: 0.5em;
+  padding-left: 2em;
+}
+.content li {
+  line-height: 1.6;
+  padding-top: 0.5em;
+}
+.content span {
+  font-weight: 600;
+}
+.content {
+  max-width: 100em;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
+}
+.content-card {
+  padding: 2em;
+  background-color: #d5dfe6;
+  display: flex;
+  flex-direction: row;
+  /* border-radius: 8px; */
+  overflow: hidden;
+  width: 100%;
+  max-width: 90em;
+}
+.content-card:nth-child(odd) {
+  background-color: #E7EDF1;
+}
+
+.content-card img {
+  width: 40%;
+  height: auto;
+  object-fit: contain;
+}
+.content-text {
+  width: 60%;
+  padding: 20px;
+}
+
+/** our story end */
 
 /*! footer start */
 footer {
