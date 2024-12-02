@@ -1,11 +1,13 @@
 function checkInfo() {
   // This function checks for the user's information
-  var firstName = document.getElementById("fname").value;
+  let firstName = document.getElementById("fname").value;
   firstName = firstName.charAt(0).toUpperCase() + firstName.slice(1); //Capitalize the first name
-  var lastName = document.getElementById("lname").value;
+  let lastName = document.getElementById("lname").value;
   lastName = lastName.charAt(0).toUpperCase() + lastName.slice(1); //Capitalize the last name
-  var email = document.getElementById("email").value;
-  var phoneNumber = document.getElementById("phone").value;
+  let email = document.getElementById("email").value;
+  let validEmail = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/.test(email);
+  let phoneNumber = document.getElementById("phone").value;
+  let validPhone = /^\d{8}$/.test(phoneNumber);
 
   // Validate fields
   if (
@@ -17,21 +19,23 @@ function checkInfo() {
     alert("Please ensure all fields are filled out before submitting.");
     return false;
   } else if (firstName.length < 3) {
-    alert("Your first name must contain 3 or more characters");
+    alert("Your first name must contain 3 or more characters.");
     return false;
   } else if (lastName.length < 3) {
-    alert("Your last name must contain 3 or more characters");
+    alert("Your last name must contain 3 or more characters.");
     return false;
-  } else if (phoneNumber.length !== 8) {
-    alert("Your phone number should have exactly 8 digits");
+  } else if (!validPhone) {
+    alert("Your phone number should have exactly 8 digits.");
     return false;
-  } else {
-    // store the first name to the local storage
-    localStorage.setItem("firstName", firstName);
-    // Call welcome function
-    welcome(firstName, lastName);
-    return true;
+  } else if (!validEmail) {
+    alert("Please enter a valid email address.");
+    return false;
   }
+  // store the first name to the local storage
+  localStorage.setItem("firstName", firstName);
+  // Call welcome function
+  welcome(firstName, lastName);
+  return true;
 }
 
 function welcome(first, last) {
@@ -100,7 +104,7 @@ function feedbackThanks() {
     alert("Please enter your feedback first.");
     return;
   }
-  
+
   // Thank the user for their feedback
   alert("Thank you for your feedback!");
   window.location.reload();

@@ -8,7 +8,7 @@
     ></script>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="css/styles.css"/>
+    <link rel="stylesheet" href="css/styles.css" />
     <!-- importing google fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -33,56 +33,159 @@
         border-bottom: 2px solid purple;
       }
 
-      
       h1 {
         text-align: center;
         padding: 0.5em 0;
       }
-      
     </style>
   </head>
   <body>
-    <body>
-      <div id="div"></div>
-    
-      <!-- Header or navigation bar start -->
-      <header class="header">
-        <a href="home.html">
-          <img src="images/logo.jpg" alt="logo" class="logo" />
-        </a>
-        <div class="nav-bar">
-          <a href="home.html" id="home" class="nav-link">Home</a>
-          <a href="items.html" id="shop" class="nav-link">Shop</a>
-          <a href="cart.html" id="cart">Shopping Cart</a>
-          <a href="testimonials.html" id="test" class="nav-link">Testimonials</a>
-          <a href="making-of.html" id="make" class="nav-link">Making of</a>
-          <a href="our-story.html" id="story" class="nav-link">Our Story</a>
-        </div>
-    
-        <div class="reg">
-          <a href="/home.html#registration"><i class="fa-regular fa-user fa-lg"></i></a>
-          <a href="home.html#registration" id="register">Register</a>
-        </div>
-      </header>
-      <hr />
-      <!-- Main content start -->
-      <h1>Shopping Cart</h1>
-    
-      <!-- Cart items container, where cart items will be dynamically added -->
-      <div class="cards-container"></div>
-    
-      <div class="items-info">
-        <div class="cart-total">
-          <span id="total-price">0.00</span>
-        </div>
-        <div>
-          <button id="remove-all">Remove All Items</button>
-          <button id="checkout" onclick="checkout()">Checkout</button>
-        </div>
+    <!-- Header or navigation bar start -->
+    <header class="header">
+      <a href="home.html">
+        <img src="images/logo.jpg" alt="logo" class="logo" />
+      </a>
+      <div class="nav-bar">
+        <a href="home.html" id="home" class="nav-link">Home</a>
+        <a href="items.html" id="shop" class="nav-link">Shop</a>
+        <a href="cart.html" id="cart">Shopping Cart</a>
+        <a href="testimonials.html" id="test" class="nav-link">Testimonials</a>
+        <a href="making-of.html" id="make" class="nav-link">Making of</a>
+        <a href="our-story.html" id="story" class="nav-link">Our Story</a>
       </div>
-    
-      <!-- Include your cart.js script at the end of the body -->
-      <script src="scripts/cart.js"></script>
-    </body>
-  
+
+      <div class="reg">
+        <a href="/home.html#registration"
+          ><i class="fa-regular fa-user fa-lg"></i
+        ></a>
+        <a href="home.html#registration" id="register">Register</a>
+      </div>
+    </header>
+    <hr />
+    <!-- Main content start -->
+    <h1>Shopping Cart</h1>
+
+    <!-- Cart items container, where cart items will be dynamically added -->
+    <div class="cards-container"></div>
+
+    <div class="items-info">
+      <div class="cart-total">
+        <span id="total-price">0.00</span>
+      </div>
+      <div>
+        <button id="remove-all">Remove All Items</button>
+        <button id="checkout" onclick="checkout()">Checkout</button>
+      </div>
+    </div>
+
+    <!-- Include your cart.js script at the end of the body -->
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        const listCart = document.querySelector(".cards-container");
+        const removeAllButton = document.querySelector("#remove-all");
+        const totalPriceDiv = document.getElementById("total-price");
+
+        // Check if the cart display exists on this page
+        if (listCart) {
+          addCartToHTML();
+        }
+
+        // Add cart items to the HTML
+        function addCartToHTML() {
+          let carts = JSON.parse(localStorage.getItem("cart")) || [];
+          let totalPrice = 0;
+
+          if (listCart) {
+            listCart.innerHTML = ""; // Clear any existing items
+
+            if (carts.length > 0) {
+              carts.forEach((item, index) => {
+                let newCart = document.createElement("div");
+                newCart.classList.add("item");
+
+                newCart.innerHTML = `
+            <div class="cart-card">
+              <img src="${
+                item.image || "default-image.jpg"
+              }" alt="Item Image" />
+              <div class="cart-card-content">
+                <p class="item-name">${item.name}</p>
+                <p class="item-price">${parseFloat(item.price).toFixed(
+                  2
+                )} BD</p>
+                <button class="remove-button" data-index="${index}">Remove from Cart</button>
+              </div>
+            </div>
+          `;
+
+                // Calculate the total price
+                totalPrice += parseFloat(item.price);
+
+                listCart.appendChild(newCart);
+              });
+
+              totalPriceDiv.innerHTML = `<h3>Total: ${totalPrice.toFixed(
+                2
+              )} BD</h3>`;
+            } else {
+              // Display empty cart message
+              listCart.innerHTML = `
+          <div style="width: 100%;">
+            <p style="text-align: center; color: gray; padding-top: 9em; font-size: 1.2em">
+              Your cart is empty!
+            </p>
+          </div>
+        `;
+              totalPriceDiv.innerHTML = `<h3>Total: 0.00 BD</h3>`;
+            }
+          }
+        }
+
+        // Remove an item from the cart
+        if (listCart) {
+          listCart.addEventListener("click", function (event) {
+            if (
+              event.target &&
+              event.target.classList.contains("remove-button")
+            ) {
+              const itemIndex = parseInt(
+                event.target.getAttribute("data-index"),
+                10
+              );
+              removeFromCart(itemIndex);
+            }
+          });
+        }
+
+        function removeFromCart(itemIndex) {
+          let carts = JSON.parse(localStorage.getItem("cart")) || [];
+          carts.splice(itemIndex, 1); // Remove the item by index
+          localStorage.setItem("cart", JSON.stringify(carts)); // Save updated cart
+          addCartToHTML(); // Refresh the cart display
+        }
+
+        // Remove all items from the cart
+        if (removeAllButton) {
+          removeAllButton.addEventListener("click", function () {
+            localStorage.removeItem("cart"); // Clear the cart in localStorage
+            addCartToHTML(); // Refresh the cart display
+          });
+        }
+
+        // Checkout function
+        window.checkout = function () {
+          let carts = JSON.parse(localStorage.getItem("cart"));
+          if (!carts || carts.length === 0) {
+            alert("Your cart is empty. Please add items to your cart first.");
+            return;
+          }
+          alert(
+            "Your order is being packed and will be delivered to you soon."
+          );
+          localStorage.removeItem("cart"); // Clear the cart after checkout
+          addCartToHTML(); // Refresh the cart display
+        };
+      });
+    </script>
+  </body>
 </html>
