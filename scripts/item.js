@@ -1,35 +1,27 @@
-//(for items page)
-
 document.addEventListener("DOMContentLoaded", function () {
-  const addToCartButtons = document.querySelectorAll(".add-to-cart");
+  let cart = JSON.parse(localStorage.getItem("cart")) || [];
 
-  // Add event listeners to each button
-  addToCartButtons.forEach((button) => {
-    button.addEventListener("click", function () {
-      const itemId = button.getAttribute("data-id");
-      addToCart(itemId-1);
-    });
-  });
+  function addToCart(event) {
+    const productCard = event.target.closest(".card");
+    if (!productCard) return;
 
-  // Add item to cart
-  function addToCart(itemId) {
-    let cart = JSON.parse(localStorage.getItem("cart")) || [];
+    const name = productCard.querySelector(".Product-name").textContent.trim();
+    const price = productCard.querySelector(".Price").textContent.trim();
+    const imageSrc = productCard.querySelector(".card-front img").getAttribute("src");
 
-    fetch('products.json')
-    .then(response => response.json())
-    .then(items => {
-      // Check if the item is already in the cart by matching the item id
-      const itemExists = cart.some(cartItem => cartItem.id === items[itemId].id);
-
-      if (itemExists) {
-        // If the item is already in the cart, alert the user
-        alert(`Item is already in your cart!`);
-      } else {
-        // If the item is not in the cart, add it and update localStorage
-        cart.push(items[itemId]);
-        localStorage.setItem('cart', JSON.stringify(cart));
-        alert(`Item has been added to your cart!`);
-      }
-    });
+    const itemExists = cart.some((cartItem) => cartItem.name === name);
+    if (itemExists) {
+      alert(`"${name}" is already in your cart!`);
+    } else {
+      cart.push({ name, price, image: imageSrc });
+      localStorage.setItem("cart", JSON.stringify(cart));
+      alert(`Added "${name}" to your cart!`);
+    }
   }
+
+  document.addEventListener("click", (event) => {
+    if (event.target.classList.contains("add-to-cart")) {
+      addToCart(event);
+    }
+  });
 });

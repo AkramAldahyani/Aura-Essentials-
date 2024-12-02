@@ -3,7 +3,7 @@ document.addEventListener("DOMContentLoaded", function () {
   const removeAllButton = document.querySelector("#remove-all");
   const totalPriceDiv = document.getElementById("total-price");
 
-  // Check if the listCart element exists on this page
+  // Check if the cart display exists on this page
   if (listCart) {
     addCartToHTML();
   }
@@ -12,6 +12,7 @@ document.addEventListener("DOMContentLoaded", function () {
   function addCartToHTML() {
     let carts = JSON.parse(localStorage.getItem("cart")) || [];
     let totalPrice = 0;
+
     if (listCart) {
       listCart.innerHTML = ""; // Clear any existing items
 
@@ -22,71 +23,70 @@ document.addEventListener("DOMContentLoaded", function () {
 
           newCart.innerHTML = `
             <div class="cart-card">
-              <img src="${
-                item.image || "default-image.jpg"
-              }" alt="Item Image" />
+              <img src="${item.image || "default-image.jpg"}" alt="Item Image" />
               <div class="cart-card-content">
                 <p class="item-name">${item.name}</p>
-                <p class="item-price">${item.price} BD</p>
-                <button class="remove-button" data-id="${
-                  item.id
-                }">Remove from Cart</button>
+                <p class="item-price">${parseFloat(item.price).toFixed(2)} BD</p>
+                <button class="remove-button" data-index="${index}">Remove from Cart</button>
               </div>
             </div>
           `;
 
-          // calculating the total
-          totalPrice += item.price;
+          // Calculate the total price
+          totalPrice += parseFloat(item.price);
 
           listCart.appendChild(newCart);
         });
 
         totalPriceDiv.innerHTML = `<h3>Total: ${totalPrice.toFixed(2)} BD</h3>`;
       } else {
+        // Display empty cart message
         listCart.innerHTML = `
           <div style="width: 100%;">
-            <p style="text-align: center; color: gray; padding-top: 9em; font-size: 1.2em">Your cart is empty!</p>
+            <p style="text-align: center; color: gray; padding-top: 9em; font-size: 1.2em">
+              Your cart is empty!
+            </p>
           </div>
         `;
         totalPriceDiv.innerHTML = `<h3>Total: 0.00 BD</h3>`;
       }
     }
   }
-  listCart.addEventListener("click", function (event) {
-    if (event.target && event.target.classList.contains("remove-button")) {
-      const itemId = parseInt(event.target.getAttribute("data-id"), 10);
-      removeFromCart(itemId);
-    }
-  });
-  // Remove an item from the cart
-  function removeFromCart(itemId) {
-    let carts = JSON.parse(localStorage.getItem("cart")) || [];
-    carts = carts.filter((item) => item.id !== itemId);
-    // Save the updated cart back to localStorage
-    localStorage.setItem("cart", JSON.stringify(carts));
 
-    addCartToHTML();
+  // Remove an item from the cart
+  if (listCart) {
+    listCart.addEventListener("click", function (event) {
+      if (event.target && event.target.classList.contains("remove-button")) {
+        const itemIndex = parseInt(event.target.getAttribute("data-index"), 10);
+        removeFromCart(itemIndex);
+      }
+    });
   }
 
-  // Remove All Items from Cart
+  function removeFromCart(itemIndex) {
+    let carts = JSON.parse(localStorage.getItem("cart")) || [];
+    carts.splice(itemIndex, 1); // Remove the item by index
+    localStorage.setItem("cart", JSON.stringify(carts)); // Save updated cart
+    addCartToHTML(); // Refresh the cart display
+  }
+
+  // Remove all items from the cart
   if (removeAllButton) {
     removeAllButton.addEventListener("click", function () {
-      localStorage.removeItem("cart");
+      localStorage.removeItem("cart"); // Clear the cart in localStorage
       addCartToHTML(); // Refresh the cart display
     });
   }
 
-  // Checkout Function
+  // Checkout function
   window.checkout = function () {
-    let cart = JSON.parse(localStorage.getItem("cart"));
-    // Check if the cart is empty
-    if (!cart || cart.length === 0) {
+    let carts = JSON.parse(localStorage.getItem("cart"));
+    if (!carts || carts.length === 0) {
       alert("Your cart is empty. Please add items to your cart first.");
       return;
     }
     alert("Your order is being packed and will be delivered to you soon.");
-    localStorage.removeItem("cart");
-
-    addCartToHTML();
+    localStorage.removeItem("cart"); // Clear the cart after checkout
+    addCartToHTML(); // Refresh the cart display
   };
 });
