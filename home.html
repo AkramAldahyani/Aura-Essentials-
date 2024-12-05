@@ -134,7 +134,10 @@
             of inner health and well-being. Founded with a passion for skincare,
             our mission is to empower individuals to embrace their natural
             beauty through high-quality, effective products that nourish the
-            skin and uplift the spirit.
+            skin and uplift the spirit. The website offers a range of skincare
+            products for all skin types, including cleansers, moisturizers, and
+            serums, with trusted brands and customer reviews. It provides easy
+            browsing, secure payments, and fast shipping.
           </p>
         </div>
         <div class="image">
@@ -156,6 +159,7 @@
               placeholder="Enter your first name"
               required
             />
+            <div id="fname-error"  style="color: red; font-size: small;"></div>
           </div>
           <div>
             <label for="lname">Last Name</label>
@@ -166,6 +170,7 @@
               placeholder="Enter your last name"
               required
             />
+            <div id="lname-error"  style="color: red; font-size: small;"></div>
           </div>
           <div>
             <label for="email">E-mail</label>
@@ -176,6 +181,7 @@
               placeholder="Enter your e-mail"
               required
             />
+            <div id="email-error"  style="color: red; font-size: small;"></div>
           </div>
           <div>
             <label for="phone">Phone Number</label>
@@ -187,6 +193,7 @@
               maxlength="8"
               required
             />
+            <div id="phone-error"  style="color: red; font-size: small;"></div>
           </div>
           <input type="submit" value="Register" onclick="return checkInfo()" />
         </form>

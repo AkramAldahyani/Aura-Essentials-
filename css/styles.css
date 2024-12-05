@@ -215,7 +215,8 @@ h1 {
 }
 .overview {
   min-width: 700px;
-  height: 200px;
+  width: auto;
+  height: auto;
   max-width: 70px;
   background-color: rgba(157, 129, 137, 0.4);
   border-radius: 20px;
